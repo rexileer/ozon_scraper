@@ -45,13 +45,6 @@ def collect_product_info(driver, url=''):
     product_name = soup.find('div', attrs={"data-widget": 'webProductHeading'}).find(
         'h1').text.strip().replace('\t', '').replace('\n', ' ')
 
-    # product_id
-    # try:
-    #     product_id = soup.find('div', string=re.compile(
-    #         'Артикул:')).text.split('Артикул: ')[1].strip()
-    # except:
-    #     product_id = None
-
     # product statistic
     try:
         product_statistic = soup.find(
